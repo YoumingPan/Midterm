@@ -1,0 +1,114 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.header {
+    background-color: #FFFF77;
+    padding: 20px;
+    text-align: left;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+}
+
+.logo {
+    float: left;
+    margin-top: 8px;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    margin-left: 50px;
+}
+
+.topnav a:hover {
+    font-weight: bold;
+    background-color: #ddd;
+    color: black;
+}
+
+.searchbar {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    margin-left: 1000px;
+}
+.submit {
+    margin-left: 1200px;
+    margin-top: -42px;
+}
+.signin {
+    margin-left: 1250px;
+    margin-top: -75px;
+}
+.column {
+    float: left;
+    padding: 10px;
+}
+
+.column.left {
+    width: 60%;
+}
+
+.prev{
+    cursor: pointer;
+    position: absolute;
+    top: 50%; 
+    transform: translateY(-50%); 
+    font-size: 30px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 10px 15px;
+    border-radius: 50%;
+    margin-top: 300px;
+}
+
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%; 
+    transform: translateY(-50%); 
+    font-size: 30px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 10px 15px;
+    border-radius: 50%;
+    margin-top: 300px;
+    margin-left: 805px;
+}
+
+.column.right {
+    width: 35%;
+    height: 850px;
+    border: 3px solid black;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media screen and (max-width: 600px) {
+    .column.side, .column.middle {
+        width: 100%;
+    }
+}
+
+.footer {
+    background-color: #f1f1f1;
+    padding: 10px;
+    text-align: center;
+}

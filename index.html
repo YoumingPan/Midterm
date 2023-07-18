@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Youming Pan</title>
+  <link href="css/style.css" type="text/css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<div class="header">
+  <h1>Basketball Community</h1>
+</div>
+
+<div class="topnav">
+  <div class="logo">
+  <img src="images/logo.png" width="50" height="50">
+  </div>
+  <div class="nav">
+    <a href="https://www.nba.com/">NBA</a>
+    <a href="https://www.cbaleague.com/#/">CBA</a>
+    <a href="#">Community</a>
+    <a href="#">Event</a>
+    <a href="#">News</a>
+    <a href="#">Basketball Court</a>
+    <form class="navbar-form navbar-left">
+      <div class="searchbar">
+        <input type="text" class="form-control" placeholder="Search">
+      </div>
+      <div class="submit">
+        <button type="submit" class="btn btn-default">Submit</button>
+      </div>
+      <div class="signin">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#">Sign in</a></li>
+        </ul>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="scores">
+  <img src="images/score.png" width="1600">
+</div>
+<div class="row">
+  <div class="column left">
+    <div class="picture">
+      <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+      <div class="slide">
+        <img src="images/1.jpg" width="850" height="850" alt="">
+      </div>
+      <div class="slide">
+        <img src="images/2.jpg" width="850" height="850" alt="">
+      </div>
+      <div class="slide">
+        <img src="images/3.jpg" width="850" height="850" alt="">
+      </div>
+      <a class="next" onclick="changeSlide(1)">&#10095;</a>
+    </div>
+
+    <script>
+      let slideIndex = 1;
+      let autoSlideInterval;
+
+
+      function startAutoSlide() {
+        autoSlideInterval = setInterval(function() {
+          changeSlide(1);
+        }, 3000); 
+      }
+
+
+      function stopAutoSlide() {
+        clearInterval(autoSlideInterval);
+      }
+
+
+      function changeSlide(n) {
+        showSlides(slideIndex += n);
+      }
+
+
+      function showSlides(n) {
+        const slides = document.getElementsByClassName("slide");
+
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+
+
+        for (let i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+
+
+        slides[slideIndex - 1].style.display = "block";
+      }
+
+
+      function manualChangeSlide(n) {
+        stopAutoSlide();
+        changeSlide(n);
+        startAutoSlide();
+      }
+
+
+      startAutoSlide();
+    </script>
+
+  </div>
+
+  <div class="column right">
+    <h2>Basketball Information</h2>
+    <p>Sample text</p>
+    <p>Sample text</p>
+    <p>Sample text</p>
+    <p>Sample text</p>
+    <p>Sample text</p>
+    <p>Sample text</p>
+    <p>Sample text</p>
+    <p>Sample text</p>
+    <p>Sample text</p>
+    <p>Sample text</p>
+    <p>Sample text</p>
+    <p>Sample text</p>
+    <p>Sample text</p>
+    <p>Sample text</p>
+    <p>Sample text</p>
+    <p>Sample text</p>
+    
+  </div>
+</div>
+
+<div class="footer">
+  <p>Lorem ipsum</p>
+</div>
+
+</body>
+</html>
